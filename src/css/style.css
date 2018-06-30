@@ -17,9 +17,6 @@ h3 {
   display: block;
   padding: 3px;
   margin: auto;
-}
-
-.fixed {
   position: fixed;
   top: 0;
 }
