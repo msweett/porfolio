@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from './Header'
 import NavBar from './NavBar'
 import Content from './Content'
 
@@ -21,7 +20,7 @@ class App extends React.Component {
           <Content title="Interests" content={interests} />
           <Content title="Contact" content={contact} />
         </div>
-        <div class="footer">Footer!</div>
+        <div class="footer"></div>
       </div>
     )
   }
