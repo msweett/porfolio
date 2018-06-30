@@ -2,15 +2,15 @@ import React from 'react'
 
 class Content extends React.Component {
   render() {
-    const name = this.props.contentName
+    const content = this.props.content
     const title = this.props.title
 
     return (
-      <div class="content-block" className={name}>
+      <div id={"content-" + title} class="content-block">
         <h4>{title}</h4>
         <hr class="content-block-line" />
         <p>
-          {this.props.content}
+          {content}
         </p>
       </div>
     )

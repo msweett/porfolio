@@ -6,7 +6,7 @@ class NavItem extends React.Component {
     return (
       <span>
         <div class="nav-item" >
-          <a className={name}>
+          <a href={"#content-" + name}>
             {name}
           </a>
         </div>
