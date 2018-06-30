@@ -5,7 +5,7 @@ class NavItem extends React.Component {
     const name = this.props.navName
     return (
       <span>
-        <div className="nav-item" >
+        <div class="nav-item" >
           <a className={name}>
             {name}
           </a>

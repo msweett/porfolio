@@ -10,13 +10,18 @@ h3 {
   text-align: center;
 }
 
-.navbar {
+#navbar {
   background-color: rgb(247, 247, 247);
-  height: 20%;
+  height: 80px;
   width: 100%;
   display: block;
   padding: 3px;
   margin: auto;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
 }
 
 /* .main-content {
@@ -59,20 +64,20 @@ h3 {
   display: inline-block;
   width: 150px;
   margin: 5px;
-  padding: 10px;
+  padding: 5px;
   border-left: 3px solid rgb(49, 49, 49);
-  text-align: left;
+  text-align: center;
   font-family: Helvetica;
   font-style: italic;
   font-size: 20px;
 }
 
-.navbar ul {
+#navbar ul {
   list-style: none;
 }
 
-.navbar li {
+#navbar li {
   display: inline;
-  padding-left: 200px;
+  padding-left: 50px;
 
 }
