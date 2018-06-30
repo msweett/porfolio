@@ -82,7 +82,7 @@ a.nav-item-link {
   text-align: center;
   display: inline-block;
   text-align: center;
-  border-left: 1px solid white;
+  border-left: 2px solid white;
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   font-weight: bold;
@@ -91,6 +91,7 @@ a.nav-item-link {
 
 a.nav-item-link:hover {
   background: rgb(104, 104, 104);
+  border-color: rgb(127, 135, 255);
 }
 
 .nav-items{
@@ -107,7 +108,6 @@ a.nav-item-link:hover {
 
 #navbar li {
   display: inline-block;
-  padding:1px;
   width:20%;
   height: 100%;
 }
