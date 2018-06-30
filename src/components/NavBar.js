@@ -1,11 +1,10 @@
 import React from 'react'
 import SidebarNavItem from './NavItem'
-import Header from './Header'
 
 class NavBar extends React.Component {
   render() {
     return (
-      <div id="navbar">
+      <nav id="navbar">
         <span class="nav-items">
           <ul>
             <li>
@@ -22,8 +21,8 @@ class NavBar extends React.Component {
             </li>
           </ul>
         </span>
-        <span class="site-name">Matthew Sweett's Portfolio</span>
-      </div>
+        <span class="site-name">Matthew Sweett</span>
+      </nav>
     )
   }
 }
