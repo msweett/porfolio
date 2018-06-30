@@ -1,7 +1,78 @@
-h1 {
-  font-family: "Trebuchet MS";
+body {
+  background-color: rgb(218, 224, 230);
+  font-family: Verdana;
+  margin: 0;
 }
 
-body {
-  background-color: rgb(153, 186, 215);
+h1,
+h3 {
+  font-family: "Trebuchet MS";
+  text-align: center;
+}
+
+.navbar {
+  background-color: rgb(247, 247, 247);
+  height: 20%;
+  width: 100%;
+  display: block;
+  padding: 3px;
+  margin: auto;
+}
+
+/* .main-content {
+  height: 50%;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  display: block;
+  border: 1px solid black;
+  background-color: rgb(235, 235, 235);
+  padding: 15px;
+  border-radius: 15px;
+} */
+
+.content-block {
+  height: 50%;
+  width: 80%;
+  margin: auto;
+  margin-top: 25px;
+  display: block;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  padding: 50px;
+  border-radius: 15px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+.content-block h4{
+  padding:0px;
+}
+
+.content-block-line{
+  width:50%;
+  display:inline-block;
+  border-color: rgb(206, 209, 252);
+  padding:0px;
+}
+
+.nav-item {
+  display: inline-block;
+  width: 150px;
+  margin: 5px;
+  padding: 10px;
+  border-left: 3px solid rgb(49, 49, 49);
+  text-align: left;
+  font-family: Helvetica;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar li {
+  display: inline;
+  padding-left: 200px;
+
 }
