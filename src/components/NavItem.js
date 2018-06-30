@@ -5,11 +5,13 @@ class NavItem extends React.Component {
     const name = this.props.navName
     return (
       <span>
-        <div class="nav-item" >
-          <a href={"#content-" + name}>
+        <a href={"#content-" + name}>
+          <div class="nav-item" >
+
             {name}
-          </a>
-        </div>
+
+          </div>
+        </a>
       </span>
     )
   }
