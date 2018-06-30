@@ -4,15 +4,9 @@ class NavItem extends React.Component {
   render() {
     const name = this.props.navName
     return (
-      <span>
-        <a href={"#content-" + name}>
-          <div class="nav-item" >
-
-            {name}
-
-          </div>
-        </a>
-      </span>
+      <a class="nav-item-link" href={"#content-" + name}>
+        {name}
+      </a>
     )
   }
 }
