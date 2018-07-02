@@ -1,28 +1,28 @@
 import React from 'react'
-import SidebarNavItem from './NavItem'
+import NavItem from './NavItem'
 
 class NavBar extends React.Component {
   render() {
     return (
-      <nav id="navbar">
+      <div id="navbar">
         <span class="nav-items">
           <ul>
             <li>
-              <SidebarNavItem navName="About me" />
+              <NavItem name="About me" route="/about_me" />
             </li>
             <li>
-              <SidebarNavItem navName="Experience" />
+              <NavItem name="Experience" route="/experience" />
             </li>
             <li>
-              <SidebarNavItem navName="Interests" />
+              <NavItem name="Interests" route="/interests" />
             </li>
             <li>
-              <SidebarNavItem navName="Contact" />
+              <NavItem name="Contact" route="/contact" />
             </li>
           </ul>
         </span>
         <span class="site-name">Matthew Sweett</span>
-      </nav>
+      </div>
     )
   }
 }
