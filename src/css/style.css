@@ -89,6 +89,13 @@ a.nav-item-link, a.nav-item-link:visited, a.nav-item-link:link, a.nav-item-link:
 
 /* End NavBar */
 
+.not-found{
+  margin: auto;
+  display:flex;
+  color: green;
+  justify-content: center;
+}
+
 .main-content {
   height: 100%;
   width: 80%;
