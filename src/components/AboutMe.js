@@ -11,10 +11,10 @@ class AboutMe extends React.Component {
         return (
             <div className="matthew-sweett-porfolio">
                 <NavBar />
-                <div class="main-content">
+                <div className="main-content">
                     <Content title="About me" content={aboutMe} />
                 </div>
-                <div class="footer"></div>
+                <div className="footer"></div>
             </div>
         )
     }

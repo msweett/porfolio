@@ -6,9 +6,9 @@ class Content extends React.Component {
     const title = this.props.title
 
     return (
-      <div id={"content-" + title} class="content-block">
+      <div id={"content-" + title} className="content-block">
         <h4>{title}</h4>
-        <hr class="content-block-line" />
+        <hr className="content-block-line" />
         <p>
           {content}
         </p>

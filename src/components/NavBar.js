@@ -5,7 +5,7 @@ class NavBar extends React.Component {
   render() {
     return (
       <div id="navbar">
-        <span class="nav-items">
+        <span className="nav-items">
           <ul>
             <li>
               <NavItem name="About me" route="/about_me" />
@@ -21,7 +21,7 @@ class NavBar extends React.Component {
             </li>
           </ul>
         </span>
-        <span class="site-name">Matthew Sweett</span>
+        <span className="site-name">Matthew Sweett</span>
       </div>
     )
   }

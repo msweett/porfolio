@@ -11,10 +11,10 @@ class Experience extends React.Component {
         return (
             <div className="matthew-sweett-porfolio">
                 <NavBar />
-                <div class="main-content">
+                <div className="main-content">
                     <Content title="Experience" content={experience} />
                 </div>
-                <div class="footer"></div>
+                <div className="footer"></div>
             </div>
         )
     }
