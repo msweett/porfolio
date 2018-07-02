@@ -12,6 +12,12 @@ h3 {
   display: inline-block;
 }
 
+.main-page{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* NavBar */
 
 #navbar {
@@ -21,7 +27,7 @@ h3 {
   display: flex;
   justify-content: space-around;
   margin: 0;
-  border-top: 2px solid rgb(127, 135, 255);
+  border-top: 3px solid rgb(127, 135, 255);
   position: fixed;
   top: 0;
 }
@@ -98,12 +104,54 @@ a.nav-item-link, a.nav-item-link:visited, a.nav-item-link:link, a.nav-item-link:
 
 .main-content {
   height: 100%;
-  width: 80%;
-  margin: auto;
+  width: 100%;
   margin-top: 100px;
-  display: block;
-  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
 }
+
+/* Sidebar */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(58, 58, 58);
+  border-top: 3px solid rgb(127, 135, 255);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sidebar ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li{
+  margin-bottom: 10px;
+  padding: 5px;
+  color: rgb(219, 219, 219);
+  border-left: 3px solid rgb(143, 143, 143);
+  text-align: center;
+  font-family: Helvetica;
+}
+
+.sidebar li:hover {
+  text-decoration: none;
+  background: rgb(104, 104, 104);
+  border-color: rgb(127, 135, 255);
+}
+
+.sidebar h4{
+  color: white;
+}
+
+.sidebar h4:hover{
+  color:  rgb(127, 135, 255);
+}
+
+/* End sidebar */
 
 .footer{
   width: 100%;
@@ -114,8 +162,6 @@ a.nav-item-link, a.nav-item-link:visited, a.nav-item-link:link, a.nav-item-link:
 .content-block {
   height: 50%;
   width: 80%;
-  margin: auto;
-  padding: 50px;
 }
 
 .content-block-line{

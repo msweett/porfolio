@@ -9,7 +9,7 @@ class Experience extends React.Component {
         const experience = "I have some skills!"
 
         return (
-            <div className="matthew-sweett-porfolio">
+            <div className="main-page">
                 <NavBar />
                 <div className="main-content">
                     <Content title="Experience" content={experience} />

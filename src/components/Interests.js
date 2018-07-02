@@ -9,7 +9,7 @@ class Interests extends React.Component {
         const interests = "I enjoy most things!"
 
         return (
-            <div className="matthew-sweett-porfolio">
+            <div className="main-page">
                 <NavBar />
                 <div className="main-content">
                     <Content title="Interests" content={interests} />

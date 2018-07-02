@@ -8,6 +8,9 @@ class NavBar extends React.Component {
         <span className="nav-items">
           <ul>
             <li>
+              <NavItem name="Blog" route="/blog" />
+            </li>
+            <li>
               <NavItem name="About me" route="/about_me" />
             </li>
             <li>

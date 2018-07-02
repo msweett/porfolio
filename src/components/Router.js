@@ -6,6 +6,7 @@ import Experience from "./Experience";
 import Interests from "./Interests";
 import Contact from "./Contact";
 import NotFound from "./NotFound";
+import Blog from "./Blog";
 
 const Router = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const Router = () => (
       <Route path="/experience" component={Experience} />
       <Route path="/interests" component={Interests} />
       <Route path="/contact" component={Contact} />
+      <Route path="/blog" component={Blog} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>

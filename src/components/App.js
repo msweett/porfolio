@@ -9,7 +9,7 @@ class App extends React.Component {
     const home = "This is the home page!"
 
     return (
-      <div className="matthew-sweett-porfolio">
+      <div className="main-page">
         <NavBar />
         <div className="main-content">
           <Content title="home" content={home} />
