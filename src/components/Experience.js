@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 import Content from './Content'
 
 
-class App extends React.Component {
+class Experience extends React.Component {
 
     render() {
         const experience = "I have some skills!"
@@ -20,4 +20,4 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default Experience

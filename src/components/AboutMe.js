@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 import Content from './Content'
 
 
-class App extends React.Component {
+class AboutMe extends React.Component {
 
     render() {
         const aboutMe = "Hi, my name is Matthew Sweett. I am 27 years old and am currently working as a QA specialist at GetChalk!"
@@ -20,4 +20,4 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default AboutMe

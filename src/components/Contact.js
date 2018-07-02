@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 import Content from './Content'
 
 
-class App extends React.Component {
+class Contact extends React.Component {
 
     render() {
         const contact = "All of my contact information should be here!"
@@ -20,4 +20,4 @@ class App extends React.Component {
     }
 }
 
-export default App
+export default Contact
