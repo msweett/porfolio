@@ -6,11 +6,13 @@
     "react-scripts": "next"
   },
   "dependencies": {
-    "react": "^16.4.1",
+    "firebase": "^4.10.1",
+    "re-base": "3.2.2",
+    "react": "^16.8.4",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
-    "firebase": "^4.10.1",
-    "re-base": "3.2.2"
+    "styled-components": "^4.1.3"
   },
   "scripts": {
     "start": "react-scripts start",

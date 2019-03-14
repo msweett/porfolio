@@ -1,9 +1,9 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Content from "./Content";
-import Sidebar from "./Sidebar";
-import base, { firebaseApp } from "../base";
-import Login from "./Login";
+import NavBar from "../molecules/NavBar";
+import Content from "../molecules/Content";
+import Sidebar from "../molecules/Sidebar";
+import base, { firebaseApp } from "../../base";
+import Login from "../molecules/Login";
 import firebase from "firebase";
 
 class Blog extends React.Component {
