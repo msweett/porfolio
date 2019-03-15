@@ -7,40 +7,23 @@ class NavigationalContent extends React.Component {
   render() {
     const { content, color, stringLinks, scrollCB } = this.props;
 
-    const createContent = () => {
-      const words = content.split(" ");
-      const stringLinksKeys = Object.keys(stringLinks);
-
-      //   const content = words.map(word => {
-      //     if (stringLinksKeys.includes(word)) {
-      //       var str = () => <p>{words.split(word)[0]}</p>;
-      //       var link = () => (
-      //         <p onClick={() => goToAnchor(stringLinks[word])}>{word}</p>
-      //       );
-      //       var jsx = str + link;
-      //     }
-      //     console.log("This: ", jsx);
-      //     return jsx;
-      //   });
-      //   return content;
-    };
-    {
-      /* Object.keys(stringLinks).map(key => {
-        console.log(stringLinks[key]);
-      }); */
-    }
-    {
-      /* }; */
-    }
-
-    // const stringLinksWords =
-
-    // words.map(word => word in stringLinksWords);
+    const createContent = () =>
+      Object.keys(stringLinks).map(key => {
+        console.log(key);
+        if (stringLinks[key]) {
+          return (
+            <StyledText key={key} onClick={() => goToAnchor(key)}>
+              {key}
+            </StyledText>
+          );
+        } else {
+          return <text key={key}>{key}</text>;
+        }
+      });
 
     return (
-      <PWrapper onClick={() => goToAnchor(stringLinks["Video Games"])}>
-        {createContent()}
-        <StyledP style={{ color: color }}>{content}</StyledP>
+      <PWrapper>
+        <StyledP style={{ color: color }}>{createContent()}</StyledP>
       </PWrapper>
     );
   }
@@ -53,9 +36,16 @@ class NavigationalContent extends React.Component {
 NavigationalContent.propTypes = {
   content: PropTypes.string.isRequired,
   stringLinks: PropTypes.object.isRequired,
-  color: PropTypes.string,
-  scrollCB: PropTypes.func
+  color: PropTypes.string
 };
+
+const StyledText = Styled.text`
+background:#022f7a;
+  &:hover{
+    background: #4175cc;
+    cursor: pointer;
+  } 
+`;
 
 const StyledP = Styled.p`
   font-weight: 25px;
@@ -66,7 +56,7 @@ const StyledP = Styled.p`
 const PWrapper = Styled.div`
   display: flex;
   height: 150px;
-  width: 500px;
+  width: 550px;
   justify-content:center;
 `;
 

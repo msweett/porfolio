@@ -10,27 +10,40 @@ import ScrollableAnchor, { goToAnchor } from "react-scrollable-anchor";
 
 class Interests extends React.Component {
   render() {
-    const interests =
-      "Some things I enjoy outside of work: Video Games, Photography, Cars";
-    const interests2 = "Video Games, Photography, Cars";
+    const videogames = "Rocket League, Apex Legends, and Heathstone";
+    const Photography = "...insert cool pictures here ;)";
+    const cars = "Cars are cool!";
 
-    const stringLinks = { "Video Games": "videogames" };
+    const stringLinks = {
+      "Some of things I enjoy outside of work: ": false,
+      "Video Games": true,
+      ", ": false,
+      Photography: true,
+      ", and ": false,
+      Cars: true
+    };
 
     return (
       <div className="main-page">
         <ColoredContentWrapper>
-          <NavigationalContent
-            scrollCB={this.scrollToRef}
-            content={interests}
-            stringLinks={stringLinks}
-          />
+          <NavigationalContent stringLinks={stringLinks} />
         </ColoredContentWrapper>
-        <ScrollableAnchor id={"videogames"}>
+        <ScrollableAnchor id={"Video Games"}>
           <BlankContentWrapper>
-            <Content content={interests} color="black" />
+            <Content content={videogames} color="black" />
           </BlankContentWrapper>
         </ScrollableAnchor>
-        <div style={{ height: "1000px" }} />
+        <ScrollableAnchor id={"Photography"}>
+          <ColoredContentWrapper>
+            <Content content={Photography} />
+          </ColoredContentWrapper>
+        </ScrollableAnchor>
+        <ScrollableAnchor id={"Cars"}>
+          <BlankContentWrapper>
+            <Content content={cars} color="black" />
+          </BlankContentWrapper>
+        </ScrollableAnchor>
+        <div style={{ height: "700px" }} />
       </div>
     );
   }
