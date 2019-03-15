@@ -9,7 +9,6 @@ class Experience extends React.Component {
 
     return (
       <div className="main-page">
-        <NavBar />
         <ContentWrapper>
           <Content title="Experience" content={experience} />
         </ContentWrapper>

@@ -22,14 +22,14 @@ h3 {
 /* NavBar */
 
 #navbar {
-  background-color: rgb(58, 58, 58);
+  /* background-color: rgb(58, 58, 58); */
   height: 75px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 0;
   border-top: 3px solid rgb(127, 135, 255);
-  position: fixed;
+  /* position: fixed; */
   top: 0;
 }
 
@@ -90,9 +90,13 @@ a.nav-item-link:active {
 }
 
 .site-name {
-  color: rgb(233, 233, 233);
+  /* color: rgb(233, 233, 233); */
   font-family: "Trebuchet MS";
   align-self: center;
+  top: 25px;
+  justify-content: center;
+  text-align: center;
+  width: 150px;
 }
 
 .site-name:hover {

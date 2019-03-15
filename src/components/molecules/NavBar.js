@@ -33,14 +33,13 @@ class NavBar extends React.Component {
         <StyledNavLink
           classname="nav-item-link"
           key={item}
-          name={item}
           to={`/${item}`}
           activeStyle={{
             color: "white",
             "background-color": "#035B96"
           }}
         >
-          {item}
+          {item.replace("_", " ")}
         </StyledNavLink>
       </li>
     ));
@@ -55,7 +54,7 @@ class NavBar extends React.Component {
         <span className="nav-items">
           <ul>{this.createNavItems()}</ul>
         </span>
-        <span className="site-name">Matthew Sweett</span>
+        {/* <span className="site-name">Matthew Sweett</span> */}
       </div>
     );
   }
@@ -68,14 +67,13 @@ const StyledNavLink = styled(NavLink)`
   text-transform: uppercase;
   width: 100%;
   border-left: 2px solid white;
-  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   text-decoration: none;
-  color: rgb(219, 219, 219);
+  color: black;
 `;
