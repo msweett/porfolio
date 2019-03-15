@@ -14,29 +14,17 @@ class NavBar extends React.Component {
     }
   };
 
-  selectedHandler(page) {
-    const selected = { ...this.state.selected };
-
-    if (selected[page]) {
-      selected[page] = false;
-    } else {
-      selected[page] = true;
-    }
-
-    this.setState({ selected: selected });
-  }
-
   createNavItems() {
     const pages = ["about_me", "experience", "interests", "contact"];
     const navItems = pages.map(item => (
-      <li key={item} style={{ "border-bottom-left-radius": "50px" }}>
+      <li key={item}>
         <StyledNavLink
-          classname="nav-item-link"
+          className="nav-item-link"
           key={item}
           to={`/${item}`}
           activeStyle={{
             color: "white",
-            "background-color": "#035B96"
+            backgroundColor: "#035B96"
           }}
         >
           {item.replace("_", " ")}
@@ -66,8 +54,6 @@ const StyledNavLink = styled(NavLink)`
   font-size: 12px;
   text-transform: uppercase;
   width: 100%;
-  border-left: 2px solid white;
-  box-sizing: border-box;
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
@@ -76,4 +62,8 @@ const StyledNavLink = styled(NavLink)`
   align-items: center;
   text-decoration: none;
   color: black;
+
+  &:hover {
+    background-color: #bce4ff;
+  }
 `;
