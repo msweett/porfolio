@@ -27,7 +27,7 @@ class NavigationalContent extends React.Component {
 
     return (
       <PWrapper>
-        <StyledP style={{ color: color }}>{createContent()}</StyledP>
+        <TextWrapper style={{ color: color }}>{createContent()}</TextWrapper>
       </PWrapper>
     );
   }
@@ -51,10 +51,11 @@ background:#022f7a;
   } 
 `;
 
-const StyledP = Styled.div`
+const TextWrapper = Styled.div`
   font-weight: 25px;
   font-size: 25px;
   text-align: center;
+  height: 80px;
 `;
 
 const PWrapper = Styled.div`
@@ -62,6 +63,7 @@ const PWrapper = Styled.div`
   height: 150px;
   width: 550px;
   justify-content:center;
+  align-items: center;
 `;
 
 export default NavigationalContent;
