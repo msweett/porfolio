@@ -1,7 +1,10 @@
 import React from "react";
 import NavBar from "../molecules/NavBar";
 import Content from "../molecules/Content";
-import ContentWrapper from "../atoms/ContentWrapper";
+import {
+  ColoredContentWrapper,
+  BlankContentWrapper
+} from "../atoms/ContentWrappers";
 
 class Interests extends React.Component {
   render() {
@@ -9,9 +12,9 @@ class Interests extends React.Component {
 
     return (
       <div className="main-page">
-        <ContentWrapper>
+        <ColoredContentWrapper>
           <Content title="Interests" content={interests} />
-        </ContentWrapper>
+        </ColoredContentWrapper>
         <div className="footer" />
       </div>
     );

@@ -4,18 +4,21 @@ import React from "react";
 import NavBar from "../molecules/NavBar";
 import Content from "../molecules/Content";
 import Header from "../molecules/Header";
-import ContentWrapper from "../atoms/ContentWrapper";
+import {
+  ColoredContentWrapper,
+  BlankContentWrapper
+} from "../atoms/ContentWrappers";
 
 class AboutMe extends React.Component {
   render() {
     const aboutMe =
-      "Hi, my name is Matthew Sweett; an east coast software developer!";
+      "Hi, my name is Matthew Sweett; software developer & QA specalist!";
 
     return (
       <div className="matthew-sweett-porfolio">
-        <ContentWrapper>
+        <ColoredContentWrapper>
           <Content title="About me" content={aboutMe} />
-        </ContentWrapper>
+        </ColoredContentWrapper>
         <div className="footer" />
       </div>
     );

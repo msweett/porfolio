@@ -1,18 +1,25 @@
 import React from "react";
-import NavBar from "../molecules/NavBar";
 import Content from "../molecules/Content";
-import ContentWrapper from "../atoms/ContentWrapper";
+import {
+  ColoredContentWrapper,
+  BlankContentWrapper
+} from "../atoms/ContentWrappers";
+import BarGraph from "../molecules/BarGraph";
 
 class Experience extends React.Component {
+  skills = { HTML: 0.7, CSS: 0.5, Python: 0.8, JavaScript: 0.3 };
+
   render() {
     const experience = "I have some skills!";
 
     return (
       <div className="main-page">
-        <ContentWrapper>
+        <ColoredContentWrapper>
           <Content title="Experience" content={experience} />
-        </ContentWrapper>
-        <div className="footer" />
+        </ColoredContentWrapper>
+        <BlankContentWrapper>
+          <BarGraph items={this.skills} />
+        </BlankContentWrapper>
       </div>
     );
   }
