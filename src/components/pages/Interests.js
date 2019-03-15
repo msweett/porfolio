@@ -15,7 +15,7 @@ class Interests extends React.Component {
     const cars = "Cars are cool!";
 
     const stringLinks = {
-      "Some of things I enjoy outside of work: ": false,
+      "Some things I enjoy doing outside of work: ": false,
       "Video Games": true,
       ", ": false,
       Photography: true,

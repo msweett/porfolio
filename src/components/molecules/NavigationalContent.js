@@ -17,7 +17,11 @@ class NavigationalContent extends React.Component {
             </StyledText>
           );
         } else {
-          return <text key={key}>{key}</text>;
+          return (
+            <p style={{ display: "inline" }} key={key}>
+              {key}
+            </p>
+          );
         }
       });
 
@@ -34,12 +38,12 @@ class NavigationalContent extends React.Component {
 }
 
 NavigationalContent.propTypes = {
-  content: PropTypes.string.isRequired,
   stringLinks: PropTypes.object.isRequired,
   color: PropTypes.string
 };
 
-const StyledText = Styled.text`
+const StyledText = Styled.p`
+display: inline;
 background:#022f7a;
   &:hover{
     background: #4175cc;
@@ -47,7 +51,7 @@ background:#022f7a;
   } 
 `;
 
-const StyledP = Styled.p`
+const StyledP = Styled.div`
   font-weight: 25px;
   font-size: 25px;
   text-align: center;
