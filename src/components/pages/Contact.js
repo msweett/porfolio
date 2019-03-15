@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../molecules/NavBar";
 import Content from "../molecules/Content";
+import ContentWrapper from "../atoms/ContentWrapper";
 
 class Contact extends React.Component {
   render() {
@@ -8,10 +9,10 @@ class Contact extends React.Component {
 
     return (
       <div className="main-page">
-        <NavBar />
-        <div className="main-content">
+        {/* <NavBar /> */}
+        <ContentWrapper>
           <Content title="Contact" content={contact} />
-        </div>
+        </ContentWrapper>
         <div className="footer" />
       </div>
     );

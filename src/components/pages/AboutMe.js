@@ -4,21 +4,18 @@ import React from "react";
 import NavBar from "../molecules/NavBar";
 import Content from "../molecules/Content";
 import Header from "../molecules/Header";
+import ContentWrapper from "../atoms/ContentWrapper";
 
 class AboutMe extends React.Component {
   render() {
     const aboutMe =
-      "Hi, my name is Matthew Sweett. I am 27 years old and am currently working as a QA specialist at GetChalk!";
+      "Hi, my name is Matthew Sweett; an east coast software developer!";
 
     return (
       <div className="matthew-sweett-porfolio">
-        <NavBar />
-        <HeaderWrapper>
-          <Heading heading="About Me" />
-        </HeaderWrapper>
-        <div className="main-content">
+        <ContentWrapper>
           <Content title="About me" content={aboutMe} />
-        </div>
+        </ContentWrapper>
         <div className="footer" />
       </div>
     );
@@ -26,16 +23,3 @@ class AboutMe extends React.Component {
 }
 
 export default AboutMe;
-
-const Heading = styled(Header)`
-  display: inline-block;
-  top: 100px;
-  margin-top: 100px;
-`;
-
-const HeaderWrapper = styled.div`
-  display: flex;
-  position: relative;
-  justify-content: center;
-  top: 200px;
-`;

@@ -1,5 +1,7 @@
 import React from "react";
 import NavItem from "../atoms/NavItem";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 class NavBar extends React.Component {
   state = {
@@ -25,16 +27,21 @@ class NavBar extends React.Component {
   }
 
   createNavItems() {
-    const pages = ["blog", "about_me", "experience", "interests", "contact"];
+    const pages = ["about_me", "experience", "interests", "contact"];
     const navItems = pages.map(item => (
-      <li key={item}>
-        <NavItem
+      <li key={item} style={{ "border-bottom-left-radius": "50px" }}>
+        <StyledNavLink
+          classname="nav-item-link"
           key={item}
           name={item}
-          route={`/${item}`}
-          selectedCB={page => this.selectedHandler(page)}
-          selected={this.state.selected[item]}
-        />
+          to={`/${item}`}
+          activeStyle={{
+            color: "white",
+            "background-color": "#035B96"
+          }}
+        >
+          {item}
+        </StyledNavLink>
       </li>
     ));
 
@@ -55,3 +62,20 @@ class NavBar extends React.Component {
 }
 
 export default NavBar;
+
+const StyledNavLink = styled(NavLink)`
+  font-size: 12px;
+  text-transform: uppercase;
+  width: 100%;
+  border-left: 2px solid white;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: rgb(219, 219, 219);
+`;
