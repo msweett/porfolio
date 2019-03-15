@@ -1,24 +1,43 @@
 import React from "react";
-import NavBar from "../molecules/NavBar";
+import Styled from "styled-components";
 import Content from "../molecules/Content";
 import {
   ColoredContentWrapper,
   BlankContentWrapper
 } from "../atoms/ContentWrappers";
+import NavigationalContent from "../molecules/NavigationalContent";
+import ScrollableAnchor, { goToAnchor } from "react-scrollable-anchor";
 
 class Interests extends React.Component {
   render() {
-    const interests = "I enjoy most things!";
+    const interests =
+      "Some things I enjoy outside of work: Video Games, Photography, Cars";
+    const interests2 = "Video Games, Photography, Cars";
+
+    const stringLinks = { "Video Games": "videogames" };
 
     return (
       <div className="main-page">
         <ColoredContentWrapper>
-          <Content title="Interests" content={interests} />
+          <NavigationalContent
+            scrollCB={this.scrollToRef}
+            content={interests}
+            stringLinks={stringLinks}
+          />
         </ColoredContentWrapper>
-        <div className="footer" />
+        <ScrollableAnchor id={"videogames"}>
+          <BlankContentWrapper>
+            <Content content={interests} color="black" />
+          </BlankContentWrapper>
+        </ScrollableAnchor>
+        <div style={{ height: "1000px" }} />
       </div>
     );
   }
 }
 
 export default Interests;
+
+const StyledLinkText = Styled.p`
+  background: blue;
+`;

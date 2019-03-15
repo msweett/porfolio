@@ -36,13 +36,11 @@ class NavBar extends React.Component {
   }
 
   render() {
-    console.log("State:", this.state);
     return (
       <div id="navbar">
         <span className="nav-items">
           <ul>{this.createNavItems()}</ul>
         </span>
-        {/* <span className="site-name">Matthew Sweett</span> */}
       </div>
     );
   }
