@@ -1,18 +1,30 @@
 import React from "react";
 import Styled from "styled-components";
 
+/*
+Accepts:
+  Content: whole string
+  Link: link to where the string link will go 
+*/
 class Content extends React.Component {
   render() {
-    const content = this.props.content;
-    const title = this.props.title;
+    const { content, color } = this.props;
 
     return (
       <PWrapper>
-        <StyledP>{content}</StyledP>
+        <StyledP style={{ color: color }}>{content}</StyledP>
       </PWrapper>
     );
   }
+
+  static defaultProps = {
+    color: "white"
+  };
 }
+
+// Content.defaultProps = {
+//   color: "white"
+// };
 
 export default Content;
 
@@ -20,7 +32,6 @@ const StyledP = Styled.p`
   font-weight: 25px;
   font-size: 25px;
   text-align: center;
-  color: white;
 `;
 
 const PWrapper = Styled.div`
