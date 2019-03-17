@@ -28,7 +28,8 @@ class NavBar extends React.Component {
             border: "5px solid #184387",
             "border-bottom": "none",
             "border-top-left-radius": "5px",
-            "border-top-right-radius": "5px"
+            "border-top-right-radius": "5px",
+            "box-shadow": "1px 10px 10px black"
           }}
         >
           {item.replace("_", " ")}
@@ -53,21 +54,28 @@ class NavBar extends React.Component {
 export default NavBar;
 
 const StyledNavLink = styled(NavLink)`
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bolder;
+  font-family: Verdana;
   text-transform: uppercase;
-  /* border: 2px solid #062d6b; */
   border-bottom: none;
-  width: 100%;
+  border-top: none;
+  width: 250px;
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
   display: flex;
+  box-shadow: 0px 1px 7px #aeb3ba inset;
   justify-content: space-evenly;
   align-items: center;
   text-decoration: none;
   color: black;
+  background-color: #f4faff;
 
   &:hover {
-    background-color: #bce4ff;
+    background-color: #deeef9;
+    border: 1px solid #a4c6dd;
+    border-bottom: none;
+    border-top: none;
   }
 `;
