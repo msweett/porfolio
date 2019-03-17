@@ -24,7 +24,11 @@ class NavBar extends React.Component {
           to={`/${item}`}
           activeStyle={{
             color: "white",
-            backgroundColor: "#035B96"
+            backgroundColor: "#035B96",
+            border: "5px solid #184387",
+            "border-bottom": "none",
+            "border-top-left-radius": "5px",
+            "border-top-right-radius": "5px"
           }}
         >
           {item.replace("_", " ")}
@@ -51,6 +55,8 @@ export default NavBar;
 const StyledNavLink = styled(NavLink)`
   font-size: 12px;
   text-transform: uppercase;
+  /* border: 2px solid #062d6b; */
+  border-bottom: none;
   width: 100%;
   font-weight: bold;
   letter-spacing: 1px;
