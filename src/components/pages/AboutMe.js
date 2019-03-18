@@ -1,9 +1,6 @@
-import styled from "styled-components";
 import React from "react";
 
-import NavBar from "../molecules/NavBar";
 import Content from "../molecules/Content";
-import Header from "../molecules/Header";
 import {
   ColoredContentWrapper,
   BlankContentWrapper
@@ -19,7 +16,6 @@ class AboutMe extends React.Component {
         <ColoredContentWrapper>
           <Content title="About me" content={aboutMe} />
         </ColoredContentWrapper>
-        <div className="footer" />
       </div>
     );
   }

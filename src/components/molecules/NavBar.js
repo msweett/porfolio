@@ -1,5 +1,4 @@
 import React from "react";
-import NavItem from "../atoms/NavItem";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
@@ -16,37 +15,29 @@ class NavBar extends React.Component {
 
   createNavItems() {
     const pages = ["about_me", "experience", "interests", "contact"];
-    const navItems = pages.map(item => (
-      <li key={item}>
+    const items = pages.map(item => (
+      <NavItem key={item}>
         <StyledNavLink
           className="nav-item-link"
           key={item}
           to={`/${item}`}
           activeStyle={{
-            color: "white",
-            backgroundColor: "#035B96",
-            border: "5px solid #184387",
-            "border-bottom": "none",
-            "border-top-left-radius": "5px",
-            "border-top-right-radius": "5px",
-            "box-shadow": "1px 10px 10px black"
+            color: "#5ab9fc"
           }}
         >
           {item.replace("_", " ")}
         </StyledNavLink>
-      </li>
+      </NavItem>
     ));
 
-    return navItems;
+    return items;
   }
 
   render() {
     return (
-      <div id="navbar">
-        <span className="nav-items">
-          <ul>{this.createNavItems()}</ul>
-        </span>
-      </div>
+      <Navbar>
+        <NavItems>{this.createNavItems()}</NavItems>
+      </Navbar>
     );
   }
 }
@@ -54,28 +45,43 @@ class NavBar extends React.Component {
 export default NavBar;
 
 const StyledNavLink = styled(NavLink)`
-  font-size: 14px;
-  font-weight: bolder;
+  font-size: 12px;
+  font-weight: bold;
   font-family: Verdana;
   text-transform: uppercase;
-  border-bottom: none;
-  border-top: none;
-  width: 250px;
+  width: 100px;
+  height: 50px;
   font-weight: bold;
   letter-spacing: 1px;
   text-align: center;
-  display: flex;
-  box-shadow: 0px 1px 7px #aeb3ba inset;
-  justify-content: space-evenly;
   align-items: center;
   text-decoration: none;
-  color: black;
-  background-color: #f4faff;
+  color: white;
+`;
 
-  &:hover {
-    background-color: #deeef9;
-    border: 1px solid #a4c6dd;
-    border-bottom: none;
-    border-top: none;
+const Navbar = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  top: 0;
+  @media (min-width: 500px) {
+    padding-left: 25px;
   }
+`;
+
+const NavItems = styled.ul`
+  list-style: none;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+`;
+
+const NavItem = styled.li`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 `;

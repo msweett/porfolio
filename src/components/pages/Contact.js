@@ -13,10 +13,6 @@ class Contact extends React.Component {
   SkillGraph = () => {
     const skills = { HTML: 70, CSS: 60, Python: 70, JavaScript: 40 };
 
-    console.log("hello");
-
-    // console.log("skills");
-
     const graph = () => {
       for (var key in skills) {
         console.log(key);
@@ -24,11 +20,6 @@ class Contact extends React.Component {
       }
     };
 
-    // return graph();
-    // Object.keys(skills).forEach(key => {
-    //   console.log(key);
-    // });
-    // graph();
     return graph();
   };
 

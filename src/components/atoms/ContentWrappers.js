@@ -11,7 +11,7 @@ export const ColoredContentWrapper = styled.div`
 `;
 
 export const BlankContentWrapper = styled.div`
-  background-color: white;
+  background-color: #eaeaea;
   height: 300px;
   width: 100%;
   display: flex;
@@ -19,5 +19,3 @@ export const BlankContentWrapper = styled.div`
   align-items: center;
   padding: 5px;
 `;
-
-// export default (ColoredContentWrapper, BlankContentWrapper);
