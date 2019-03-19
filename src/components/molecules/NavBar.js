@@ -66,7 +66,7 @@ const Navbar = styled.div`
   background: black;
   top: 0;
   @media (min-width: 500px) {
-    padding-left: 25px;
+    /* padding-left: 25px; */
   }
 `;
 

@@ -7,7 +7,6 @@ export const ColoredContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
 `;
 
 export const BlankContentWrapper = styled.div`
@@ -17,5 +16,4 @@ export const BlankContentWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px;
 `;
